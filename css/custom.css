@@ -171,10 +171,7 @@ div#category {
   margin: 0px !important;
 }
 
-/* 头图透明 */
-#page-header {
-  background: transparent !important;
-}
+
 
 #rightside > div > button {
   border-radius: 5px;
