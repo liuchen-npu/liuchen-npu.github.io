@@ -40,6 +40,22 @@ svg.icon {
 div#post {
   background: rgba(255, 255, 255, 0.9);
 }
+
+/* 移除各独立页面顶部大横幅（归档/标签/分类/友链/普通页面等） */
+#page-header.not-home-page {
+  height: 60px !important;
+  min-height: 60px !important;
+  background: transparent !important;
+}
+
+#page-header.not-home-page #page-site-info {
+  display: none !important;
+}
+
+#page-header.not-home-page::before {
+  background: transparent !important;
+}
+
 #recent-posts > .recent-post-item:not(:first-child):active {
   transform: scale(0.97);
 }
@@ -215,11 +231,6 @@ html.hide-aside .layout > div:first-child {
   }
 }
 
-/* 固定背景图片 */
-#web_bg {
-  background-attachment: fixed !important;
-}
-
 /* 首页头图加载 */
 .pl-container {
     width: 100%;
@@ -276,17 +287,87 @@ html.hide-aside .layout > div:first-child {
 #footer {
     background: transparent !important;
   }
-  
-/* 头图透明 */
-#page-header {
-    background: transparent !important;
-  }
+
 /* 底部透明 */
 #footer-bar{
     background: transparent !important;
 }
 
+/* 不同页面背景统一固定，并修正缩放比例与首页一致 */
+#web_bg,
+body[data-type="anzhiyu"] #web_bg,
+body[data-type="index"] #web_bg {
+  /* 覆盖主题的 200%/200% 超尺寸 + rotate，改为与首页 pl-container 完全一致的全屏显示 */
+  width: 100% !important;
+  height: 100% !important;
+  top: 0 !important;
+  left: 0 !important;
+  transform: none !important;
+  background-image: url('/img/wallpaper/index_light.png') !important;
+  background-color: transparent !important;
+  background-attachment: fixed !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+/* 深色模式背景图切换，与首页 index_dark.png 保持一致 */
+[data-theme="dark"] #web_bg,
+[data-theme="dark"] body[data-type="anzhiyu"] #web_bg,
+[data-theme="dark"] body[data-type="index"] #web_bg {
+  background-image: url('/img/wallpaper/index_dark.png') !important;
+}
+
+#page-header.full_page,
+#page-header.not-home-page,
+#page-header.post-bg {
+  background-attachment: fixed !important;
+  background-position: center center !important;
+  background-size: cover !important;
+}
+
+/* 顶栏字体颜色统一（避免不同页面黑白不一致） */
+#page-header #nav #blog_name a,
+#page-header #nav #menus a,
+#page-header #nav #nav-right .nav-button a,
+#page-header #nav #toggle-menu {
+  color: var(--font-color) !important;
+  text-shadow: none !important;
+}
+
 /* 更多透明 */
 #category-bar{
     background: transparent !important;
+}
+
+/* 分类页图表 - 漫画风格 */
+#tag .chart-card {
+  position: relative;
+  margin: 0.5rem 0 1.2rem;
+  padding: 10px 10px 4px;
+  border: 3px solid var(--anzhiyu-fontcolor);
+  border-radius: 18px;
+  background: var(--anzhiyu-card-bg);
+  box-shadow: var(--anzhiyu-shadow-border);
+}
+
+#tag .chart-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background-image: radial-gradient(var(--anzhiyu-fontcolor) 0.6px, transparent 0.6px);
+  background-size: 8px 8px;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+#calendar-chart,
+#radar-chart {
+  position: relative;
+  z-index: 1;
+}
+
+[data-theme="dark"] #tag .chart-card {
+  border-color: var(--anzhiyu-lighttext);
 }

@@ -1,3 +1,3 @@
-var posts=["posts/4a17b156.html","posts/hexo-tutorial.html","posts/3bf4a27.html","posts/study-methods.html","posts/9520.html"];function toRandomPost(){
+var posts=["posts/d72de449.html","posts/1e677d67.html","posts/3856b9e0.html","posts/ffbc14c2.html","posts/eeaf5d86.html","posts/cfebe72b.html","posts/7a6a6b5a.html"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
   };
