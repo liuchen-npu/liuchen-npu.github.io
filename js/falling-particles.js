@@ -6,7 +6,7 @@
 (function () {
   /* ===================== 配置区（可按需修改） ===================== */
   var CONFIG = {
-    type: 'sakura',   // 特效类型：'snow' | 'sakura'
+    type: 'snow',   // 特效类型：'snow' | 'sakura'
     count: 38,        // 粒子数量，建议 20-60
     speed: 1.0,       // 下落速度系数
     opacity: 0.75,    // 粒子整体透明度 (0-1)

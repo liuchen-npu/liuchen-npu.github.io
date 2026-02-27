@@ -6,7 +6,7 @@
   <link href="https://liuchen-npu.github.io/atom.xml" rel="self"/>
   
   <link href="https://liuchen-npu.github.io/"/>
-  <updated>2026-02-26T15:25:47.160Z</updated>
+  <updated>2026-02-26T15:25:47.145Z</updated>
   <id>https://liuchen-npu.github.io/</id>
   
   <author>
@@ -15,38 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>大模型研习笔记：从原理到实践</title>
-    <link href="https://liuchen-npu.github.io/posts/d72de449.html"/>
-    <id>https://liuchen-npu.github.io/posts/d72de449.html</id>
-    <published>2026-02-26T04:00:00.000Z</published>
-    <updated>2026-02-26T15:25:47.160Z</updated>
-    
-    <content type="html"><![CDATA[<p>本文为“大模型研习”专题的目录型笔记与学习计划，涵盖原理、实现与工程化要点。</p><ul><li>目标：理解 Transformer、Attention、预训练-微调流程与推理优化。</li><li>学习路线建议：<ul><li>阶段一：Transformer/Attention、优化器、训练技巧</li><li>阶段二：预训练数据与tokenizer、模型蒸馏与量化</li><li>阶段三：微调/指令调优、RAG 与检索增强方法</li><li>阶段四：模型部署、并发与内存优化</li></ul></li></ul><p>建议模板：</p><ul><li>背景/动机</li><li>关键算法与公式（必要时用 KaTeX）</li><li>实验/复现步骤</li><li>代码片段与工程化要点</li><li>下一步计划与参考论文/资源</li></ul><p>欢迎把你的学习笔记放在此目录下，便于后续归档与索引。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;本文为“大模型研习”专题的目录型笔记与学习计划，涵盖原理、实现与工程化要点。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;目标：理解 Transformer、Attention、预训练-微调流程与推理优化。&lt;/li&gt;
-&lt;li&gt;学习路线建议：&lt;ul&gt;
-&lt;li&gt;阶段一：Transformer/A</summary>
-      
-    
-    
-    
-    <category term="大模型研习" scheme="https://liuchen-npu.github.io/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%A0%94%E4%B9%A0/"/>
-    
-    
-    <category term="LLM" scheme="https://liuchen-npu.github.io/tags/LLM/"/>
-    
-    <category term="大模型" scheme="https://liuchen-npu.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
-    
-    <category term="Fine-tuning" scheme="https://liuchen-npu.github.io/tags/Fine-tuning/"/>
-    
-  </entry>
   
   <entry>
     <title>求职工坊：简历、面试与项目呈现</title>
@@ -79,6 +47,38 @@
     <category term="简历" scheme="https://liuchen-npu.github.io/tags/%E7%AE%80%E5%8E%86/"/>
     
     <category term="面试" scheme="https://liuchen-npu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>大模型研习笔记：从原理到实践</title>
+    <link href="https://liuchen-npu.github.io/posts/d72de449.html"/>
+    <id>https://liuchen-npu.github.io/posts/d72de449.html</id>
+    <published>2026-02-26T04:00:00.000Z</published>
+    <updated>2026-02-26T15:25:47.160Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文为“大模型研习”专题的目录型笔记与学习计划，涵盖原理、实现与工程化要点。</p><ul><li>目标：理解 Transformer、Attention、预训练-微调流程与推理优化。</li><li>学习路线建议：<ul><li>阶段一：Transformer/Attention、优化器、训练技巧</li><li>阶段二：预训练数据与tokenizer、模型蒸馏与量化</li><li>阶段三：微调/指令调优、RAG 与检索增强方法</li><li>阶段四：模型部署、并发与内存优化</li></ul></li></ul><p>建议模板：</p><ul><li>背景/动机</li><li>关键算法与公式（必要时用 KaTeX）</li><li>实验/复现步骤</li><li>代码片段与工程化要点</li><li>下一步计划与参考论文/资源</li></ul><p>欢迎把你的学习笔记放在此目录下，便于后续归档与索引。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;本文为“大模型研习”专题的目录型笔记与学习计划，涵盖原理、实现与工程化要点。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;目标：理解 Transformer、Attention、预训练-微调流程与推理优化。&lt;/li&gt;
+&lt;li&gt;学习路线建议：&lt;ul&gt;
+&lt;li&gt;阶段一：Transformer/A</summary>
+      
+    
+    
+    
+    <category term="大模型研习" scheme="https://liuchen-npu.github.io/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%A0%94%E4%B9%A0/"/>
+    
+    
+    <category term="LLM" scheme="https://liuchen-npu.github.io/tags/LLM/"/>
+    
+    <category term="大模型" scheme="https://liuchen-npu.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    
+    <category term="Fine-tuning" scheme="https://liuchen-npu.github.io/tags/Fine-tuning/"/>
     
   </entry>
   
@@ -183,6 +183,29 @@
   </entry>
   
   <entry>
+    <title>测试文章</title>
+    <link href="https://liuchen-npu.github.io/posts/7a6a6b5a.html"/>
+    <id>https://liuchen-npu.github.io/posts/7a6a6b5a.html</id>
+    <published>2026-02-26T04:00:00.000Z</published>
+    <updated>2026-02-26T15:04:14.414Z</updated>
+    
+    <content type="html"><![CDATA[<p>这是用于测试主页生成的文章。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这是用于测试主页生成的文章。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://liuchen-npu.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>论文精读：要点、复现与评述</title>
     <link href="https://liuchen-npu.github.io/posts/cfebe72b.html"/>
     <id>https://liuchen-npu.github.io/posts/cfebe72b.html</id>
@@ -212,29 +235,6 @@
     <category term="论文" scheme="https://liuchen-npu.github.io/tags/%E8%AE%BA%E6%96%87/"/>
     
     <category term="阅读" scheme="https://liuchen-npu.github.io/tags/%E9%98%85%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>测试文章</title>
-    <link href="https://liuchen-npu.github.io/posts/7a6a6b5a.html"/>
-    <id>https://liuchen-npu.github.io/posts/7a6a6b5a.html</id>
-    <published>2026-02-26T04:00:00.000Z</published>
-    <updated>2026-02-26T15:04:14.414Z</updated>
-    
-    <content type="html"><![CDATA[<p>这是用于测试主页生成的文章。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;这是用于测试主页生成的文章。&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="深度学习" scheme="https://liuchen-npu.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
     
   </entry>
   
