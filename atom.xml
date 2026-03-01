@@ -6,7 +6,7 @@
   <link href="https://liuchen-npu.github.io/atom.xml" rel="self"/>
   
   <link href="https://liuchen-npu.github.io/"/>
-  <updated>2026-02-26T15:25:47.145Z</updated>
+  <updated>2026-03-01T06:53:57.835Z</updated>
   <id>https://liuchen-npu.github.io/</id>
   
   <author>
@@ -15,6 +15,63 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决 Linux 终端中文文件名及路径乱码问题</title>
+    <link href="https://liuchen-npu.github.io/posts/d9093649.html"/>
+    <id>https://liuchen-npu.github.io/posts/d9093649.html</id>
+    <published>2026-03-01T02:00:00.000Z</published>
+    <updated>2026-03-01T06:53:57.835Z</updated>
+    
+    <content type="html"><![CDATA[<p>在日常使用 Linux 终端查阅和管理文件时，我们偶尔会遇到包含中文字符的文件名或路径无法正确显示、呈现各种乱码的现象。本文将简单记录遇到这一问题的原因分析及修复过程。</p><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在学校服务器终端中执行诸如 <code>ls</code> 等读取目录的命令时，中文文件名或路径没法正确显示，有些还会抛出类似于 <code>Cannot set LC_CTYPE to default locale</code> 的警告提示。由于终端配置的缺陷，原本正常的中文文件名被解析成无法辨认的乱码或者以各种转义字符的形式出现：</p><p><img src="https://s41.ax1x.com/2026/03/01/peSgJSO.png" alt="报错与乱码截图" style="zoom:150%;" /></p><h2 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h2><p>出现该问题的主要原因是：<strong>当前的 Linux 系统语言环境（Locale）未能正确加载对 <code>UTF-8</code> 的支持</strong>。</p><p>具体表现为系统中虽然 <code>LANG</code> 环境变量被设置成了 <code>en_US.UTF-8</code> ，但是系统内核里<strong>尚未生成对应的 Locale 文件</strong>。</p><p>当遇到这种配置不一致的情况时，系统为了保证基础指令的运行，会导致终端回退到纯英文的传统 <code>C</code> 环境。由于 <code>C</code> 环境仅支持标准的 ASCII 字符集而不能处理多字节编码（如 UTF-8 编码的中文字符），于是系统只能强行将所有非英文字符全部执行转义，最终我们在屏幕上看到的效果即是“乱码”。</p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>要解决这个问题，我们需要强制终端系统采用支持 UTF-8 的通用 Locale（即 <code>C.UTF-8</code>）。</p><p>最简单的做法就是将这两个环境变量配置直接写入到当前终端所在的配置文件中（以 bash 为例即 <code>~/.bashrc</code>）。这样每次打开命令行终端时系统都能自动加载正确的语言环境。</p><p>请在终端中依次运行以下三条命令即可完成修复：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 将 Locale 环境配置追加写入到 bashrc 配置文件中</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;export LC_ALL=C.UTF-8&quot;</span> &gt;&gt; ~/.bashrc</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;export LANG=C.UTF-8&quot;</span> &gt;&gt; ~/.bashrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 重新加载配置文件，使其在当前终端立即生效</span></span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure><blockquote><p><strong> 补充说明</strong>：如果您使用的是 <code>Zsh</code> 终端，只需将上面命令中的 <code>~/.bashrc</code> 替换为 <code>~/.zshrc</code> 即可。</p></blockquote><p>执行完毕后，再次查看曾出现乱码的文件路径，中文字符即可恢复正常显示！</p>]]></content>
+    
+    
+    <summary type="html">记录在使用 Linux 终端时遇到中文路径乱码现象的原因分析与修复解决方法。</summary>
+    
+    
+    
+    <category term="研途学术" scheme="https://liuchen-npu.github.io/categories/%E7%A0%94%E9%80%94%E5%AD%A6%E6%9C%AF/"/>
+    
+    
+    <category term="Linux" scheme="https://liuchen-npu.github.io/tags/Linux/"/>
+    
+    <category term="报错解决" scheme="https://liuchen-npu.github.io/tags/%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/"/>
+    
+    <category term="终端配置" scheme="https://liuchen-npu.github.io/tags/%E7%BB%88%E7%AB%AF%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>大模型研习笔记：从原理到实践</title>
+    <link href="https://liuchen-npu.github.io/posts/d72de449.html"/>
+    <id>https://liuchen-npu.github.io/posts/d72de449.html</id>
+    <published>2026-02-26T04:00:00.000Z</published>
+    <updated>2026-02-26T15:25:47.160Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文为“大模型研习”专题的目录型笔记与学习计划，涵盖原理、实现与工程化要点。</p><ul><li>目标：理解 Transformer、Attention、预训练-微调流程与推理优化。</li><li>学习路线建议：<ul><li>阶段一：Transformer/Attention、优化器、训练技巧</li><li>阶段二：预训练数据与tokenizer、模型蒸馏与量化</li><li>阶段三：微调/指令调优、RAG 与检索增强方法</li><li>阶段四：模型部署、并发与内存优化</li></ul></li></ul><p>建议模板：</p><ul><li>背景/动机</li><li>关键算法与公式（必要时用 KaTeX）</li><li>实验/复现步骤</li><li>代码片段与工程化要点</li><li>下一步计划与参考论文/资源</li></ul><p>欢迎把你的学习笔记放在此目录下，便于后续归档与索引。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;本文为“大模型研习”专题的目录型笔记与学习计划，涵盖原理、实现与工程化要点。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;目标：理解 Transformer、Attention、预训练-微调流程与推理优化。&lt;/li&gt;
+&lt;li&gt;学习路线建议：&lt;ul&gt;
+&lt;li&gt;阶段一：Transformer/A</summary>
+      
+    
+    
+    
+    <category term="大模型研习" scheme="https://liuchen-npu.github.io/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%A0%94%E4%B9%A0/"/>
+    
+    
+    <category term="LLM" scheme="https://liuchen-npu.github.io/tags/LLM/"/>
+    
+    <category term="大模型" scheme="https://liuchen-npu.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    
+    <category term="Fine-tuning" scheme="https://liuchen-npu.github.io/tags/Fine-tuning/"/>
+    
+  </entry>
   
   <entry>
     <title>求职工坊：简历、面试与项目呈现</title>
@@ -51,34 +108,25 @@
   </entry>
   
   <entry>
-    <title>大模型研习笔记：从原理到实践</title>
-    <link href="https://liuchen-npu.github.io/posts/d72de449.html"/>
-    <id>https://liuchen-npu.github.io/posts/d72de449.html</id>
+    <title>测试文章</title>
+    <link href="https://liuchen-npu.github.io/posts/7a6a6b5a.html"/>
+    <id>https://liuchen-npu.github.io/posts/7a6a6b5a.html</id>
     <published>2026-02-26T04:00:00.000Z</published>
-    <updated>2026-02-26T15:25:47.160Z</updated>
+    <updated>2026-02-26T15:04:14.414Z</updated>
     
-    <content type="html"><![CDATA[<p>本文为“大模型研习”专题的目录型笔记与学习计划，涵盖原理、实现与工程化要点。</p><ul><li>目标：理解 Transformer、Attention、预训练-微调流程与推理优化。</li><li>学习路线建议：<ul><li>阶段一：Transformer/Attention、优化器、训练技巧</li><li>阶段二：预训练数据与tokenizer、模型蒸馏与量化</li><li>阶段三：微调/指令调优、RAG 与检索增强方法</li><li>阶段四：模型部署、并发与内存优化</li></ul></li></ul><p>建议模板：</p><ul><li>背景/动机</li><li>关键算法与公式（必要时用 KaTeX）</li><li>实验/复现步骤</li><li>代码片段与工程化要点</li><li>下一步计划与参考论文/资源</li></ul><p>欢迎把你的学习笔记放在此目录下，便于后续归档与索引。</p>]]></content>
+    <content type="html"><![CDATA[<p>这是用于测试主页生成的文章。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;本文为“大模型研习”专题的目录型笔记与学习计划，涵盖原理、实现与工程化要点。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;目标：理解 Transformer、Attention、预训练-微调流程与推理优化。&lt;/li&gt;
-&lt;li&gt;学习路线建议：&lt;ul&gt;
-&lt;li&gt;阶段一：Transformer/A</summary>
+    <summary type="html">&lt;p&gt;这是用于测试主页生成的文章。&lt;/p&gt;
+</summary>
       
     
     
     
-    <category term="大模型研习" scheme="https://liuchen-npu.github.io/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%A0%94%E4%B9%A0/"/>
+    <category term="深度学习" scheme="https://liuchen-npu.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
-    
-    <category term="LLM" scheme="https://liuchen-npu.github.io/tags/LLM/"/>
-    
-    <category term="大模型" scheme="https://liuchen-npu.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
-    
-    <category term="Fine-tuning" scheme="https://liuchen-npu.github.io/tags/Fine-tuning/"/>
     
   </entry>
   
@@ -117,39 +165,6 @@
   </entry>
   
   <entry>
-    <title>研途学术：研究方法与学术记录</title>
-    <link href="https://liuchen-npu.github.io/posts/ffbc14c2.html"/>
-    <id>https://liuchen-npu.github.io/posts/ffbc14c2.html</id>
-    <published>2026-02-26T04:00:00.000Z</published>
-    <updated>2026-02-26T15:25:47.184Z</updated>
-    
-    <content type="html"><![CDATA[<p>记录科研过程中的方法论、实验设计、数据处理与复现笔记。</p><p>建议结构：</p><ul><li>研究问题与动机</li><li>相关工作与文献综述</li><li>方法与实验设计</li><li>结果与可重复步骤</li><li>问题与下一步计划</li></ul><p>目标是把实验过程与思路写清楚，便于自己复现也方便合作交流。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;记录科研过程中的方法论、实验设计、数据处理与复现笔记。&lt;/p&gt;
-&lt;p&gt;建议结构：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;研究问题与动机&lt;/li&gt;
-&lt;li&gt;相关工作与文献综述&lt;/li&gt;
-&lt;li&gt;方法与实验设计&lt;/li&gt;
-&lt;li&gt;结果与可重复步骤&lt;/li&gt;
-&lt;li&gt;问题与下一步计划&lt;/li</summary>
-      
-    
-    
-    
-    <category term="研途学术" scheme="https://liuchen-npu.github.io/categories/%E7%A0%94%E9%80%94%E5%AD%A6%E6%9C%AF/"/>
-    
-    
-    <category term="学术" scheme="https://liuchen-npu.github.io/tags/%E5%AD%A6%E6%9C%AF/"/>
-    
-    <category term="研究方法" scheme="https://liuchen-npu.github.io/tags/%E7%A0%94%E7%A9%B6%E6%96%B9%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
     <title>算法学习笔记：从题解到思想</title>
     <link href="https://liuchen-npu.github.io/posts/eeaf5d86.html"/>
     <id>https://liuchen-npu.github.io/posts/eeaf5d86.html</id>
@@ -179,29 +194,6 @@
     <category term="算法" scheme="https://liuchen-npu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="数据结构" scheme="https://liuchen-npu.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>测试文章</title>
-    <link href="https://liuchen-npu.github.io/posts/7a6a6b5a.html"/>
-    <id>https://liuchen-npu.github.io/posts/7a6a6b5a.html</id>
-    <published>2026-02-26T04:00:00.000Z</published>
-    <updated>2026-02-26T15:04:14.414Z</updated>
-    
-    <content type="html"><![CDATA[<p>这是用于测试主页生成的文章。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;这是用于测试主页生成的文章。&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="深度学习" scheme="https://liuchen-npu.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
     
   </entry>
   
