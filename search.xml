@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>GitHub Pages 绑定自定义域名全流程记录</title>
+      <link href="/posts/30a4ae8f.html"/>
+      <url>/posts/30a4ae8f.html</url>
+      
+        <content type="html"><![CDATA[<p>在完成 GitHub Pages 静态站点的搭建之后，接下里就是绑定自己的域名。这里我自己买的是阿里云的域名，所以我就以阿里云为例，完整记录从 DNS 解析配置到强制 HTTPS 的全流程。</p><h2 id="配置-DNS-解析"><a href="#配置-DNS-解析" class="headerlink" title="配置 DNS 解析"></a>配置 DNS 解析</h2><p>登录阿里云控制台，进入域名列表页面，找到需要绑定的域名，点击进入解析设置。</p><p><img src="https://raw.githubusercontent.com/liuchen-npu/blog-img/main/contents/domain_config/域名列表.png" alt="域名列表"></p><blockquote><p><strong>注</strong>：域名状态必须为<strong>正常</strong>才能进行后续操作。若是刚购买的域名，需经历注册局审核、实名认证及备案等流程，耐心等待即可。</p></blockquote><p>进入解析设置页面后，点击【<strong>添加记录</strong>】，需分别添加以下两类记录：</p><h3 id="A-类型记录（共-4-条）"><a href="#A-类型记录（共-4-条）" class="headerlink" title="A 类型记录（共 4 条）"></a>A 类型记录（共 4 条）</h3><p>GitHub Pages 使用以下四个固定 IP，需逐一添加：</p><div class="table-container"><table><thead><tr><th style="text-align:center">记录类型</th><th style="text-align:center">主机记录</th><th style="text-align:center">记录值</th></tr></thead><tbody><tr><td style="text-align:center">A</td><td style="text-align:center">@</td><td style="text-align:center">185.199.108.153</td></tr><tr><td style="text-align:center">A</td><td style="text-align:center">@</td><td style="text-align:center">185.199.109.153</td></tr><tr><td style="text-align:center">A</td><td style="text-align:center">@</td><td style="text-align:center">185.199.110.153</td></tr><tr><td style="text-align:center">A</td><td style="text-align:center">@</td><td style="text-align:center">185.199.111.153</td></tr></tbody></table></div><ul><li><strong>主机记录填 <code>@</code></strong>：代表直接通过 <code>https://你的域名.com</code> 访问，无需 <code>www</code> 前缀</li><li><strong>记录值填 GitHub IP</strong>：这四个 IP 是公开固定值，一般不会变动，可直接使用</li><li><strong>阿里云需逐条添加</strong>：不支持逗号分隔多值，需要分四次创建</li></ul><p>添加四条 A 记录的目的是多 IP 冗余，避免某个节点异常时站点直接挂掉。</p><p><img src="https://raw.githubusercontent.com/liuchen-npu/blog-img/main/contents/domain_config/添加记录.png" alt="添加记录"></p><h3 id="CNAME-类型记录（1-条）"><a href="#CNAME-类型记录（1-条）" class="headerlink" title="CNAME 类型记录（1 条）"></a>CNAME 类型记录（1 条）</h3><div class="table-container"><table><thead><tr><th style="text-align:center">记录类型</th><th style="text-align:center">主机记录</th><th style="text-align:center">记录值</th></tr></thead><tbody><tr><td style="text-align:center">CNAME</td><td style="text-align:center">www</td><td style="text-align:center">your-username.github.io</td></tr></tbody></table></div><ul><li><strong>主机记录填 <code>www</code></strong>：让 <code>www.你的域名.com</code> 也能正常访问</li><li><strong>记录值填 GitHub Pages 地址</strong>：格式为 <code>your-username.github.io</code>，例如 <code>liuchen-npu.github.io</code></li></ul><blockquote><p><strong>注</strong>：记录值<strong>千万不要</strong>填自己的域名（如 <code>aa.com</code>），否则后续开启强制 HTTPS 时会直接报错。须填写 <code>xxx.github.io</code> 格式的 GitHub 地址。</p></blockquote><p>全部添加完成后，解析列表效果如下：</p><p><img src="https://raw.githubusercontent.com/liuchen-npu/blog-img/main/contents/domain_config/添加类型记录.png" alt="添加类型记录"></p><h2 id="设置-Custom-Domain"><a href="#设置-Custom-Domain" class="headerlink" title="设置 Custom Domain"></a>设置 Custom Domain</h2><p>DNS 解析配置完成后，回到 GitHub 仓库的 <strong>Settings → Pages</strong>，在 <strong>Custom domain</strong> 一栏填写你的域名（如 <code>example.com</code>），点击 <strong>Save</strong>。</p><p><img src="https://raw.githubusercontent.com/liuchen-npu/blog-img/main/contents/domain_config/设置域名.png" alt="设置域名"></p><p>保存后 GitHub 会自动发起 DNS 检测，稍等片刻，看到 <strong>“DNS check successful”</strong> 提示即表示解析已生效。</p><h2 id="强制使用-HTTPS"><a href="#强制使用-HTTPS" class="headerlink" title="强制使用 HTTPS"></a>强制使用 HTTPS</h2><p>设置 Custom Domain 完成后，GitHub 会自动申请 TLS 证书，这个过程通常需要等待几分钟到十几分钟。</p><p><img src="https://raw.githubusercontent.com/liuchen-npu/blog-img/main/contents/domain_config/TLS证书请求.png" alt="TLS证书请求"></p><p>证书颁发完毕后，<strong>Enforce HTTPS</strong> 按钮会从灰色变为可点击状态，勾选即可强制全站走 HTTPS 协议访问。</p><blockquote><p>如果不在意访问协议，这一步可以跳过，直接 <code>http://</code> 访问也没有问题。</p></blockquote><hr><p>总结：整个流程其实并不复杂，核心就两个容易出错的地方：<strong>CNAME 记录值要填 GitHub 地址而非自己的域名</strong>，以及 <strong>A 记录需要添加四条</strong>。配置完成后，属于自己的域名就正式上线啦~🎉</p><p>参考链接：<a href="https://www.cnblogs.com/zhangxiaoxu/p/18818381">GitHub Pages 绑定自定义域名完全指南</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活札记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> GitHub </tag>
+            
+            <tag> 建站 </tag>
+            
+            <tag> 域名 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>解决 Linux 终端中文文件名及路径乱码问题</title>
       <link href="/posts/d9093649.html"/>
       <url>/posts/d9093649.html</url>
@@ -62,6 +91,25 @@
     
     
     <entry>
+      <title>测试文章</title>
+      <link href="/posts/7a6a6b5a.html"/>
+      <url>/posts/7a6a6b5a.html</url>
+      
+        <content type="html"><![CDATA[<p>这是用于测试主页生成的文章。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深度学习 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>求职工坊：简历、面试与项目呈现</title>
       <link href="/posts/1e677d67.html"/>
       <url>/posts/1e677d67.html</url>
@@ -83,52 +131,6 @@
             <tag> 简历 </tag>
             
             <tag> 面试 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>测试文章</title>
-      <link href="/posts/7a6a6b5a.html"/>
-      <url>/posts/7a6a6b5a.html</url>
-      
-        <content type="html"><![CDATA[<p>这是用于测试主页生成的文章。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 深度学习 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>生活札记：学习与生活的碎片</title>
-      <link href="/posts/3856b9e0.html"/>
-      <url>/posts/3856b9e0.html</url>
-      
-        <content type="html"><![CDATA[<p>记录生活中的小片段：读书摘抄、灵感闪现、工具与习惯管理等。</p><p>条目示例：</p><ul><li>读书笔记与书摘</li><li>时间管理工具与实践</li><li>学习方法与资源整理</li><li>生活化的编程练习（小项目）</li></ul><p>格式建议：短篇幅、带标签、便于检索与归档。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 生活札记 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 生活 </tag>
-            
-            <tag> 随笔 </tag>
             
         </tags>
       
