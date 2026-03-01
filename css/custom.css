@@ -31,10 +31,60 @@ svg.icon {
   height: 1.5em;
 }
 
-/*top-img黑色透明玻璃效果移除，不建议加，除非你执着于完全一图流或者背景图对比色明显 */
-/* #page-header:not(.not-top-img):before {
+/* 移除文章页顶部"薄膜"遮罩（主色调半透明覆盖层） */
+#page-header.post-bg::before {
   background-color: transparent !important;
-} */
+  animation: none !important;
+}
+
+/* 封面图占满整个顶部背景 */
+#page-header.post-bg #post-top-cover {
+  filter: none !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  transform: none !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  overflow: hidden !important;
+}
+
+#page-header.post-bg #post-top-cover #post-top-bg {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+}
+
+#page-header.post-bg #post-top-cover::after {
+  box-shadow: none !important;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.15) 60%,
+    transparent 100%
+  ) !important;
+}
+
+/* 隐藏文章顶部波浪效果，让封面图干净铺满 */
+#page-header.post-bg .main-hero-waves-area {
+  display: none !important;
+}
+
+/* 文章页顶部文字加深阴影，增强在亮色背景图上的可读性 */
+#page-header.post-bg #post-info .post-title {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+#page-header.post-bg #post-info .post-meta-info,
+#page-header.post-bg #post-info .post-meta-categories,
+#page-header.post-bg #post-info .article-meta__separator,
+#page-header.post-bg #post-info #article-container .tag-list a,
+#page-header.post-bg #post-info .post-topGroup {
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5), 0 0 12px rgba(0, 0, 0, 0.25);
+}
 
 /* 文章页面正文背景 */
 div#post {
@@ -370,4 +420,11 @@ body[data-type="index"] #web_bg {
 
 [data-theme="dark"] #tag .chart-card {
   border-color: var(--anzhiyu-lighttext);
+}
+
+/* 隐藏右键菜单中的图片操作项，始终保持第二张图样式 */
+#menu-copyimg,
+#menu-downloadimg,
+#menu-newwindowimg {
+  display: none !important;
 }

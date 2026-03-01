@@ -119,19 +119,10 @@ var oncontextmenuFunction = function (event) {
       $rightMenuCopyLink.style.display = "none";
     }
 
-    //检查是否需要复制图片
-    if (imgsrc) {
-      pluginMode = true;
-      $rightMenuCopyImg.style.display = "block";
-      $rightMenuDownloadImg.style.display = "block";
-      $rightMenuNewWindowImg.style.display = "block";
-      document.getElementById("rightMenu").style.width = "12rem";
-      domImgSrc = imgsrc;
-    } else {
-      $rightMenuCopyImg.style.display = "none";
-      $rightMenuDownloadImg.style.display = "none";
-      $rightMenuNewWindowImg.style.display = "none";
-    }
+    //检查是否需要复制图片（已禁用，始终隐藏图片操作菜单）
+    $rightMenuCopyImg.style.display = "none";
+    $rightMenuDownloadImg.style.display = "none";
+    $rightMenuNewWindowImg.style.display = "none";
 
     // 判断是否为输入框
     if (event.target.tagName.toLowerCase() === "input" || event.target.tagName.toLowerCase() === "textarea") {

@@ -179,20 +179,6 @@
   </url>
   
   <url>
-    <loc>https://liuchen-npu.github.io/tags/%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://liuchen-npu.github.io/tags/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://liuchen-npu.github.io/tags/Linux/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -208,6 +194,20 @@
   
   <url>
     <loc>https://liuchen-npu.github.io/tags/%E7%BB%88%E7%AB%AF%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://liuchen-npu.github.io/tags/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://liuchen-npu.github.io/tags/%E9%9A%8F%E7%AC%94/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -265,14 +265,14 @@
   </url>
   
   <url>
-    <loc>https://liuchen-npu.github.io/categories/%E7%94%9F%E6%B4%BB%E6%9C%AD%E8%AE%B0/</loc>
+    <loc>https://liuchen-npu.github.io/categories/%E7%A0%94%E9%80%94%E5%AD%A6%E6%9C%AF/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://liuchen-npu.github.io/categories/%E7%A0%94%E9%80%94%E5%AD%A6%E6%9C%AF/</loc>
+    <loc>https://liuchen-npu.github.io/categories/%E7%94%9F%E6%B4%BB%E6%9C%AD%E8%AE%B0/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
