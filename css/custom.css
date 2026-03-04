@@ -257,8 +257,17 @@
   padding: 2px 8px;
   border-radius: 999px;
 }
+
 h1#site-title {
   font-size: 3em !important;
+}
+
+#site_social_icons {
+  display: block !important;
+}
+
+#site_social_icons .social-icon {
+  font-size: 1.75em !important;
 }
 
 .iconfont {
