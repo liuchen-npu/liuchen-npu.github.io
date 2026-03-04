@@ -1,3 +1,262 @@
+/* Daily Calendar Widget */
+.card-daily-calendar .item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.daily-calendar-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.daily-calendar-toolbar .calendar-nav,
+.daily-calendar-toolbar .calendar-current {
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  background: var(--anzhiyu-card-bg);
+  color: var(--anzhiyu-fontcolor);
+  line-height: 1;
+}
+
+.daily-calendar-toolbar .calendar-nav {
+  width: 26px;
+  height: 26px;
+  font-size: 18px;
+}
+
+.daily-calendar-toolbar .calendar-current {
+  padding: 5px 10px;
+  font-size: 13px;
+}
+
+.daily-calendar-week,
+.daily-calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.daily-calendar-week span {
+  text-align: center;
+  font-size: 12px;
+  color: var(--anzhiyu-secondtext);
+}
+
+.daily-day {
+  position: relative;
+  border: none;
+  background: transparent;
+  color: var(--anzhiyu-fontcolor);
+  height: 28px;
+  border-radius: 50%;
+  cursor: default;
+  font-size: 13px;
+}
+
+.daily-day.is-empty {
+  visibility: hidden;
+}
+
+.daily-day.is-today {
+  background: var(--anzhiyu-theme);
+  color: #fff;
+}
+
+.daily-day.has-record::after,
+.daily-day.has-commit::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.daily-day.has-record::after {
+  width: 5px;
+  height: 5px;
+  bottom: 1px;
+  background: #9be9a8;
+}
+
+.daily-day.has-commit::before {
+  width: 6px;
+  height: 6px;
+  bottom: 0;
+  background: #2da44e;
+}
+
+.daily-calendar-more {
+  font-size: 13px;
+  color: var(--anzhiyu-theme);
+}
+
+/* Home Daily Preview */
+.daily-home-card {
+  margin-top: 14px;
+  background: var(--anzhiyu-card-bg);
+  border-radius: 16px;
+  padding: 14px;
+}
+
+.daily-home-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.daily-home-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--anzhiyu-fontcolor);
+}
+
+.daily-home-more {
+  font-size: 13px;
+  color: var(--anzhiyu-theme);
+}
+
+.daily-home-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.daily-home-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: var(--anzhiyu-background);
+}
+
+.daily-home-date {
+  font-size: 12px;
+  color: var(--anzhiyu-secondtext);
+  min-width: 86px;
+}
+
+.daily-home-text {
+  color: var(--anzhiyu-fontcolor);
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.daily-home-main {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.daily-home-category {
+  font-size: 12px;
+  line-height: 1;
+  padding: 4px 7px;
+  border-radius: 999px;
+  color: #fff;
+  background: #2da44e;
+  white-space: nowrap;
+}
+
+/* Daily full page */
+.daily-all-records {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.daily-filter-wrap {
+  margin-top: 12px;
+}
+
+.daily-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.daily-filter-btn {
+  border: 1px solid var(--anzhiyu-card-border);
+  background: var(--anzhiyu-card-bg);
+  color: var(--anzhiyu-fontcolor);
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.daily-filter-btn.is-active {
+  background: #2da44e;
+  border-color: #2da44e;
+  color: #fff;
+}
+
+.daily-filter-empty {
+  color: var(--anzhiyu-secondtext);
+  margin: 4px 0 0;
+}
+
+.daily-category-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.daily-category-title {
+  margin: 4px 0;
+  font-size: 20px;
+}
+
+.daily-log-item {
+  border: 1px solid var(--anzhiyu-card-border);
+  border-radius: 14px;
+  padding: 14px;
+  background: var(--anzhiyu-card-bg);
+}
+
+.daily-log-item .daily-log-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.daily-log-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.daily-log-date {
+  font-weight: 700;
+}
+
+.daily-log-category {
+  font-size: 12px;
+  line-height: 1;
+  padding: 4px 7px;
+  border-radius: 999px;
+  color: #fff;
+  background: #2da44e;
+}
+
+.daily-log-badge {
+  font-size: 12px;
+  color: #fff;
+  background: #56d364;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
 h1#site-title {
   font-size: 3em !important;
 }
