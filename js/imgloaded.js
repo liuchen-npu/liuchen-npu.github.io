@@ -59,17 +59,17 @@
   
     const ldconfig = {
       light: {
-        smallSrc: '/img/wallpaper/index_light.png', //浅色模式 小图链接 尽可能配置小于100k的图片 
-        largeSrc: '/img/wallpaper/index_light.png', //浅色模式 大图链接 最终显示的图片
-        mobileSmallSrc: '/img/wallpaper/index_light.png', //手机端浅色小图链接 尽可能配置小于100k的图片
-        mobileLargeSrc: '/img/wallpaper/index_light.png', //手机端浅色大图链接 最终显示的图片
+        smallSrc: 'https://liuchen-img-1331566382.cos.ap-beijing.myqcloud.com/wallpaper/index_light.png?imageSlim', //浅色模式 小图链接 尽可能配置小于100k的图片 
+        largeSrc: 'https://liuchen-img-1331566382.cos.ap-beijing.myqcloud.com/wallpaper/index_light.png?imageSlim', //浅色模式 大图链接 最终显示的图片
+        mobileSmallSrc: 'https://liuchen-img-1331566382.cos.ap-beijing.myqcloud.com/wallpaper/index_light.png?imageSlim', //手机端浅色小图链接 尽可能配置小于100k的图片
+        mobileLargeSrc: 'https://liuchen-img-1331566382.cos.ap-beijing.myqcloud.com/wallpaper/index_light.png?imageSlim', //手机端浅色大图链接 最终显示的图片
         enableRoutes: ['/'],
         },
       dark: {
-        smallSrc: '/img/wallpaper/index_dark.png', //深色模式 小图链接 尽可能配置小于100k的图片 
-        largeSrc: '/img/wallpaper/index_dark.png', //深色模式 大图链接 最终显示的图片
-        mobileSmallSrc: '/img/wallpaper/index_dark.png', //手机端深色模式小图链接 尽可能配置小于100k的图片
-        mobileLargeSrc: '/img/wallpaper/index_dark.png', //手机端深色大图链接 最终显示的图片
+        smallSrc: 'https://liuchen-img-1331566382.cos.ap-beijing.myqcloud.com/wallpaper/index_dark.png?imageSlim', //深色模式 小图链接 尽可能配置小于100k的图片 
+        largeSrc: 'https://liuchen-img-1331566382.cos.ap-beijing.myqcloud.com/wallpaper/index_dark.png?imageSlim', //深色模式 大图链接 最终显示的图片
+        mobileSmallSrc: 'https://liuchen-img-1331566382.cos.ap-beijing.myqcloud.com/wallpaper/index_dark.png?imageSlim', //手机端深色模式小图链接 尽可能配置小于100k的图片
+        mobileLargeSrc: 'https://liuchen-img-1331566382.cos.ap-beijing.myqcloud.com/wallpaper/index_dark.png?imageSlim', //手机端深色大图链接 最终显示的图片
         enableRoutes: ['/'],
         },
       };

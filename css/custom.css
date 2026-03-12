@@ -621,7 +621,7 @@ body[data-type="index"] #web_bg {
   top: 0 !important;
   left: 0 !important;
   transform: none !important;
-  background-image: url('/img/wallpaper/index_light.png') !important;
+  background-image: url('https://liuchen-img-1331566382.cos.ap-beijing.myqcloud.com/wallpaper/index_light.png?imageSlim') !important;
   background-color: transparent !important;
   background-attachment: fixed !important;
   background-position: center center !important;
@@ -633,7 +633,7 @@ body[data-type="index"] #web_bg {
 [data-theme="dark"] #web_bg,
 [data-theme="dark"] body[data-type="anzhiyu"] #web_bg,
 [data-theme="dark"] body[data-type="index"] #web_bg {
-  background-image: url('/img/wallpaper/index_dark.png') !important;
+  background-image: url('https://liuchen-img-1331566382.cos.ap-beijing.myqcloud.com/wallpaper/index_dark.png?imageSlim') !important;
 }
 
 #page-header.full_page,
