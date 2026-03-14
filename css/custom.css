@@ -341,17 +341,79 @@ svg.icon {
   display: none !important;
 }
 
-/* 文章页顶部文字加深阴影，增强在亮色背景图上的可读性 */
+/* 文章页顶部文字按主题切换颜色，提升浅色模式可读性 */
 #page-header.post-bg #post-info .post-title {
+  color: rgba(255, 255, 255, 0.95) !important;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 #page-header.post-bg #post-info .post-meta-info,
 #page-header.post-bg #post-info .post-meta-categories,
 #page-header.post-bg #post-info .article-meta__separator,
-#page-header.post-bg #post-info #article-container .tag-list a,
+#page-header.post-bg #post-info .article-meta__tags,
 #page-header.post-bg #post-info .post-topGroup {
+  color: rgba(255, 255, 255, 0.9) !important;
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5), 0 0 12px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="light"] #page-header.post-bg #post-info .post-title {
+  color: var(--anzhiyu-fontcolor) !important;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.72), 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+[data-theme="light"] #page-header.post-bg #post-info .post-meta-info,
+[data-theme="light"] #page-header.post-bg #post-info .post-meta-categories,
+[data-theme="light"] #page-header.post-bg #post-info .article-meta__separator,
+[data-theme="light"] #page-header.post-bg #post-info .article-meta__tags,
+[data-theme="light"] #page-header.post-bg #post-info .post-topGroup {
+  color: rgba(23, 26, 33, 0.96) !important;
+  text-shadow: 0 1px 6px rgba(255, 255, 255, 0.66), 0 0 12px rgba(255, 255, 255, 0.35);
+}
+
+[data-theme="light"] #page-header.post-bg #post-info #post-meta,
+[data-theme="light"] #page-header.post-bg #post-info #post-meta a,
+[data-theme="light"] #page-header.post-bg #post-info #post-meta span,
+[data-theme="light"] #page-header.post-bg #post-info #post-meta time,
+[data-theme="light"] #page-header.post-bg #post-info #post-meta i {
+  color: rgba(23, 26, 33, 0.96) !important;
+}
+
+[data-theme="light"] #page-header.post-bg #post-info #post-meta {
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em;
+  line-height: 1.5 !important;
+}
+
+[data-theme="light"] #page-header.post-bg #post-firstinfo .meta-firstline a.post-meta-original,
+[data-theme="light"] #page-header.post-bg #post-firstinfo .meta-firstline span.post-meta-categories a.post-meta-categories {
+  background: rgba(22, 26, 34, 0.14) !important;
+  color: rgba(18, 22, 30, 0.98) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em;
+}
+
+[data-theme="light"] #page-header.post-bg #post-firstinfo .meta-firstline span.post-meta-categories,
+[data-theme="light"] #page-header.post-bg #post-firstinfo .meta-firstline .article-meta__tags,
+[data-theme="light"] #page-header.post-bg #post-firstinfo .meta-firstline .article-meta__tags i {
+  color: rgba(18, 22, 30, 0.98) !important;
+  opacity: 1 !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="light"] #page-header.post-bg #post-firstinfo .meta-firstline .article-meta__tags {
+  font-size: 1.02rem !important;
+  letter-spacing: 0.01em;
+}
+
+#post .post-copyright .post-copyright__author_box .post-copyright__author_img img {
+  width: 100% !important;
+  height: 100% !important;
+  top: 0 !important;
+  bottom: auto !important;
+  left: 0 !important;
+  object-fit: cover !important;
+  object-position: center center !important;
 }
 
 /* 文章页面正文背景 */
@@ -695,4 +757,13 @@ body[data-type="index"] #web_bg {
 #menu-downloadimg,
 #menu-newwindowimg {
   display: none !important;
+}
+
+#aside-content #card-toc .toc-content .toc-link:not(.active) span {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+#aside-content #card-toc .toc-content .toc-link {
+  opacity: 1 !important;
 }
