@@ -4,6 +4,42 @@
   
     
     <entry>
+      <title>解决 VSCode 连接服务器代理失效问题（Codex 插件可用）</title>
+      <link href="/posts/6f1d191c.html"/>
+      <url>/posts/6f1d191c.html</url>
+      
+      <cover>https://liuchen-img-1331566382.cos.ap-beijing.myqcloud.com/cover/%E8%A7%A3%E5%86%B3vscode%E4%BB%A3%E7%90%86.png?imageSlim</cover>
+      
+      
+      <content type="html"><![CDATA[<h1>解决 vscode 连接服务器无法正常使用代理（codex插件）</h1><blockquote><p>起因：在服务器配置了代理，但是无法正常使用codex,一致显示连接超时</p></blockquote><h2 id="本地终端配置">本地终端配置</h2><p>在本地终端中输入</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -R <span class="number">9999</span>:localhost:<span class="number">7890</span> 用户名@主机IP</span><br></pre></td></tr></table></figure><p>输入密码后实现与服务器的连接</p><h2 id="服务器端配置">服务器端配置</h2><p>vscode 连接服务器后，在 <code>/home/username/.bashrc</code> 最后添加：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">cat &gt;&gt; ~/.bashrc &lt;&lt;&#x27;EOF&#x27;</span><br><span class="line"></span><br><span class="line">vpn() &#123;</span><br><span class="line">  export http_proxy=http://<span class="number">192</span>.<span class="number">168</span>.<span class="number">1</span>.<span class="number">23</span>:<span class="number">9999</span></span><br><span class="line">  export https_proxy=http://<span class="number">192</span>.<span class="number">168</span>.<span class="number">1</span>.<span class="number">23</span>:<span class="number">9999</span></span><br><span class="line">  <span class="built_in">echo</span> &quot;Proxy has been <span class="built_in">set</span> to <span class="number">192</span>.<span class="number">168</span>.<span class="number">1</span>.<span class="number">23</span>:<span class="number">9999</span>&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">unvpn() &#123;</span><br><span class="line">  unset http_proxy https_proxy</span><br><span class="line">  <span class="built_in">echo</span> &quot;Proxy has been disabled&quot;</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure><p>同时在本地 Clash 中打开 <code>允许局域网连接 Clash</code></p><p><img src="https://liuchen-img-1331566382.cos.ap-beijing.myqcloud.com/contents/Clash%E9%85%8D%E7%BD%AE.png?imageSlim" alt=""></p><h2 id="使用时完整配置">使用时完整配置</h2><ol><li>在本地终端中输入<code>ssh -R 9999:localhost:7890 用户名@主机IP</code></li><li>打开服务器终端，输入<code>vpn</code></li><li>在服务器终端中输入如果在终端中出现一长串信息，说明代理成功！</li></ol><blockquote><p>如果想关闭VPN可输入<code>unvpn</code>命令</p></blockquote><h2 id="VSCode-代理配置">VSCode 代理配置</h2><p>通过上述操作，已经可以实现在服务器终端中连通 Github ，但在使用一些插件，如：Codex 时会显示网络连接问题。</p><p>其问题的关键是： VS Code 的远端 “Server/Extension Host” 是由 Remote-SSH 的另一条 ssh 连接拉起的独立进程，不会继承你在终端里 <code>vpn</code> 导出的环境变量，也未必复用你那条 <code>ssh -R</code> 隧道。</p><p>因此需要同时解决两件事：①让 VS Code 自己那条 SSH 连接也带上反向隧道；②让 VS Code 远端服务进程和扩展明确走代理！</p><h3 id="Step-1-把反向隧道写进-VS-Code-用的-SSH-配置">Step 1: 把反向隧道写进 VS Code 用的 SSH 配置</h3><p>在 Windows 上编辑 <code>C:\Users\&lt;你的用户名&gt;\.ssh\config</code>（没有就新建），加入：</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Host AAAA（主机名，可以自由设置）</span><br><span class="line">  HostName 服务器IP</span><br><span class="line">  User 用户名</span><br><span class="line">  RemoteForward 9999 127.0.0.1:7890</span><br><span class="line">  ServerAliveInterval 60</span><br><span class="line">  ServerAliveCountMax 3</span><br></pre></td></tr></table></figure><p>注意：将127.0.0.1:7890替换为自己的代理服务器地址。</p><p>之后在 VS Code 的「Remote-SSH: Connect to Host…」里选择 AAAA 连接。 （这样 VS Code 自己那条 SSH 连接也会提供 localhost:9999 的反向 HTTP 代理端口。）</p><h3 id="Step-2-为Git本身配置代理">Step 2: 为Git本身配置代理</h3><p>在服务器终端中输入<code>curl https://github.com</code>：</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy  http://127.0.0.1:9999</span><br><span class="line">git config --global https.proxy http://127.0.0.1:9999</span><br></pre></td></tr></table></figure><p>完成后在 VS Code 命令面板执行 Remote-SSH: Kill VS Code Server on Host… 并重连服务器</p><h3 id="Step-3-在「远端设置」里启用-VS-Code-的代理支持">Step 3: 在「远端设置」里启用 VS Code 的代理支持</h3><p>连接到远端后，打开 设置（齿轮→Settings），左上角会显示 “Remote [SSH: AAAA]”。在这里设置（或直接编辑 ~/.vscode-server/data/Machine/settings.json）：</p><p><img src="https://liuchen-img-1331566382.cos.ap-beijing.myqcloud.com/contents/ssh-1.png?imageSlim" alt=""><img src="https://liuchen-img-1331566382.cos.ap-beijing.myqcloud.com/contents/ssh-2.png?imageSlim" alt=""><img src="https://liuchen-img-1331566382.cos.ap-beijing.myqcloud.com/contents/ssh-3.png?imageSlim" alt=""></p><h3 id="Step-4-重启-VS-Code-远端服务，让新环境生效">Step 4: 重启 VS Code 远端服务，让新环境生效</h3><p>命令面板（Ctrl/Cmd+Shift+P）执行：Remote-SSH: Kill VS Code Server on Host…，选择你的主机；然后重新连接一次。</p><p>参考连接: <a href="https://zhuanlan.zhihu.com/p/1969519933500158862">https://zhuanlan.zhihu.com/p/1969519933500158862</a></p>]]></content>
+      
+      
+      <categories>
+        
+        <category>研途学术</category>
+        
+      </categories>
+      
+      
+      <tags>
+        
+        <tag>VSCode</tag>
+        
+        <tag>远程服务器</tag>
+        
+        <tag>代理配置</tag>
+        
+        <tag>SSH</tag>
+        
+        <tag>Codex</tag>
+        
+      </tags>
+      
+    </entry>
+    
+  
+    
+    <entry>
       <title>Transformer - HappyLLM</title>
       <link href="/posts/40ff8652.html"/>
       <url>/posts/40ff8652.html</url>
