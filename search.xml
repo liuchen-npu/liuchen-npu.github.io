@@ -287,11 +287,11 @@
       
       <tags>
         
-        <tag>LLM</tag>
-        
         <tag>大模型训练</tag>
         
         <tag>MedicalGPT</tag>
+        
+        <tag>LLM</tag>
         
         <tag>单卡训练</tag>
         
