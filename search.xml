@@ -16,18 +16,30 @@
       
       <categories>
         
-        <category>生活札记</category>
+        <category>
+          <name>生活札记</name>
+          <url>/categories/%E7%94%9F%E6%B4%BB%E6%9C%AD%E8%AE%B0/</url>
+        </category>
         
       </categories>
       
       
       <tags>
         
-        <tag>Caddy</tag>
+        <tag>
+          <name>Caddy</name>
+          <url>/tags/Caddy/</url>
+        </tag>
         
-        <tag>FRP</tag>
+        <tag>
+          <name>FRP</name>
+          <url>/tags/FRP/</url>
+        </tag>
         
-        <tag>CLIProxyAPI</tag>
+        <tag>
+          <name>CLIProxyAPI</name>
+          <url>/tags/CLIProxyAPI/</url>
+        </tag>
         
       </tags>
       
@@ -48,18 +60,30 @@
       
       <categories>
         
-        <category>生活札记</category>
+        <category>
+          <name>生活札记</name>
+          <url>/categories/%E7%94%9F%E6%B4%BB%E6%9C%AD%E8%AE%B0/</url>
+        </category>
         
       </categories>
       
       
       <tags>
         
-        <tag>Mihomo</tag>
+        <tag>
+          <name>Mihomo</name>
+          <url>/tags/Mihomo/</url>
+        </tag>
         
-        <tag>代理</tag>
+        <tag>
+          <name>代理</name>
+          <url>/tags/%E4%BB%A3%E7%90%86/</url>
+        </tag>
         
-        <tag>Linux</tag>
+        <tag>
+          <name>Linux</name>
+          <url>/tags/Linux/</url>
+        </tag>
         
       </tags>
       
@@ -80,16 +104,25 @@
       
       <categories>
         
-        <category>生活札记</category>
+        <category>
+          <name>生活札记</name>
+          <url>/categories/%E7%94%9F%E6%B4%BB%E6%9C%AD%E8%AE%B0/</url>
+        </category>
         
       </categories>
       
       
       <tags>
         
-        <tag>RustDesk</tag>
+        <tag>
+          <name>RustDesk</name>
+          <url>/tags/RustDesk/</url>
+        </tag>
         
-        <tag>远程控制</tag>
+        <tag>
+          <name>远程控制</name>
+          <url>/tags/%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6/</url>
+        </tag>
         
       </tags>
       
@@ -110,26 +143,50 @@
       
       <categories>
         
-        <category>大模型研习</category>
+        <category>
+          <name>大模型研习</name>
+          <url>/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%A0%94%E4%B9%A0/</url>
+        </category>
         
       </categories>
       
       
       <tags>
         
-        <tag>LLM</tag>
+        <tag>
+          <name>LLM</name>
+          <url>/tags/LLM/</url>
+        </tag>
         
-        <tag>大语言模型</tag>
+        <tag>
+          <name>大语言模型</name>
+          <url>/tags/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/</url>
+        </tag>
         
-        <tag>预训练</tag>
+        <tag>
+          <name>预训练</name>
+          <url>/tags/%E9%A2%84%E8%AE%AD%E7%BB%83/</url>
+        </tag>
         
-        <tag>SFT</tag>
+        <tag>
+          <name>SFT</name>
+          <url>/tags/SFT/</url>
+        </tag>
         
-        <tag>RLHF</tag>
+        <tag>
+          <name>RLHF</name>
+          <url>/tags/RLHF/</url>
+        </tag>
         
-        <tag>分布式训练</tag>
+        <tag>
+          <name>分布式训练</name>
+          <url>/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%AD%E7%BB%83/</url>
+        </tag>
         
-        <tag>预训练语料</tag>
+        <tag>
+          <name>预训练语料</name>
+          <url>/tags/%E9%A2%84%E8%AE%AD%E7%BB%83%E8%AF%AD%E6%96%99/</url>
+        </tag>
         
       </tags>
       
@@ -150,34 +207,70 @@
       
       <categories>
         
-        <category>大模型研习</category>
+        <category>
+          <name>大模型研习</name>
+          <url>/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%A0%94%E4%B9%A0/</url>
+        </category>
         
       </categories>
       
       
       <tags>
         
-        <tag>LLM</tag>
+        <tag>
+          <name>LLM</name>
+          <url>/tags/LLM/</url>
+        </tag>
         
-        <tag>Transformer</tag>
+        <tag>
+          <name>Transformer</name>
+          <url>/tags/Transformer/</url>
+        </tag>
         
-        <tag>Happy-LLM</tag>
+        <tag>
+          <name>Happy-LLM</name>
+          <url>/tags/Happy-LLM/</url>
+        </tag>
         
-        <tag>预训练语言模型</tag>
+        <tag>
+          <name>预训练语言模型</name>
+          <url>/tags/%E9%A2%84%E8%AE%AD%E7%BB%83%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/</url>
+        </tag>
         
-        <tag>Encoder-Only</tag>
+        <tag>
+          <name>Encoder-Only</name>
+          <url>/tags/Encoder-Only/</url>
+        </tag>
         
-        <tag>Decoder-Only</tag>
+        <tag>
+          <name>Decoder-Only</name>
+          <url>/tags/Decoder-Only/</url>
+        </tag>
         
-        <tag>Encoder-Decoder</tag>
+        <tag>
+          <name>Encoder-Decoder</name>
+          <url>/tags/Encoder-Decoder/</url>
+        </tag>
         
-        <tag>BERT</tag>
+        <tag>
+          <name>BERT</name>
+          <url>/tags/BERT/</url>
+        </tag>
         
-        <tag>GPT</tag>
+        <tag>
+          <name>GPT</name>
+          <url>/tags/GPT/</url>
+        </tag>
         
-        <tag>LLaMA</tag>
+        <tag>
+          <name>LLaMA</name>
+          <url>/tags/LLaMA/</url>
+        </tag>
         
-        <tag>GLM</tag>
+        <tag>
+          <name>GLM</name>
+          <url>/tags/GLM/</url>
+        </tag>
         
       </tags>
       
@@ -198,22 +291,40 @@
       
       <categories>
         
-        <category>算法学习</category>
+        <category>
+          <name>算法学习</name>
+          <url>/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/</url>
+        </category>
         
       </categories>
       
       
       <tags>
         
-        <tag>代码随想录</tag>
+        <tag>
+          <name>代码随想录</name>
+          <url>/tags/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/</url>
+        </tag>
         
-        <tag>算法</tag>
+        <tag>
+          <name>算法</name>
+          <url>/tags/%E7%AE%97%E6%B3%95/</url>
+        </tag>
         
-        <tag>数据结构</tag>
+        <tag>
+          <name>数据结构</name>
+          <url>/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
+        </tag>
         
-        <tag>哈希表</tag>
+        <tag>
+          <name>哈希表</name>
+          <url>/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/</url>
+        </tag>
         
-        <tag>双指针</tag>
+        <tag>
+          <name>双指针</name>
+          <url>/tags/%E5%8F%8C%E6%8C%87%E9%92%88/</url>
+        </tag>
         
       </tags>
       
@@ -234,22 +345,40 @@
       
       <categories>
         
-        <category>研途学术</category>
+        <category>
+          <name>研途学术</name>
+          <url>/categories/%E7%A0%94%E9%80%94%E5%AD%A6%E6%9C%AF/</url>
+        </category>
         
       </categories>
       
       
       <tags>
         
-        <tag>VSCode</tag>
+        <tag>
+          <name>VSCode</name>
+          <url>/tags/VSCode/</url>
+        </tag>
         
-        <tag>远程服务器</tag>
+        <tag>
+          <name>远程服务器</name>
+          <url>/tags/%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+        </tag>
         
-        <tag>代理配置</tag>
+        <tag>
+          <name>代理配置</name>
+          <url>/tags/%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE/</url>
+        </tag>
         
-        <tag>SSH</tag>
+        <tag>
+          <name>SSH</name>
+          <url>/tags/SSH/</url>
+        </tag>
         
-        <tag>Codex</tag>
+        <tag>
+          <name>Codex</name>
+          <url>/tags/Codex/</url>
+        </tag>
         
       </tags>
       
@@ -270,28 +399,55 @@
       
       <categories>
         
-        <category>大模型研习</category>
+        <category>
+          <name>大模型研习</name>
+          <url>/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%A0%94%E4%B9%A0/</url>
+        </category>
         
       </categories>
       
       
       <tags>
         
-        <tag>Transformer</tag>
+        <tag>
+          <name>Transformer</name>
+          <url>/tags/Transformer/</url>
+        </tag>
         
-        <tag>Happy-LLM</tag>
+        <tag>
+          <name>Happy-LLM</name>
+          <url>/tags/Happy-LLM/</url>
+        </tag>
         
-        <tag>Seq2Seq 模型</tag>
+        <tag>
+          <name>Seq2Seq 模型</name>
+          <url>/tags/Seq2Seq-%E6%A8%A1%E5%9E%8B/</url>
+        </tag>
         
-        <tag>前馈神经网络</tag>
+        <tag>
+          <name>前馈神经网络</name>
+          <url>/tags/%E5%89%8D%E9%A6%88%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
+        </tag>
         
-        <tag>层归一化</tag>
+        <tag>
+          <name>层归一化</name>
+          <url>/tags/%E5%B1%82%E5%BD%92%E4%B8%80%E5%8C%96/</url>
+        </tag>
         
-        <tag>残差连接</tag>
+        <tag>
+          <name>残差连接</name>
+          <url>/tags/%E6%AE%8B%E5%B7%AE%E8%BF%9E%E6%8E%A5/</url>
+        </tag>
         
-        <tag>Encoder</tag>
+        <tag>
+          <name>Encoder</name>
+          <url>/tags/Encoder/</url>
+        </tag>
         
-        <tag>Decoder</tag>
+        <tag>
+          <name>Decoder</name>
+          <url>/tags/Decoder/</url>
+        </tag>
         
       </tags>
       
@@ -312,14 +468,20 @@
       
       <categories>
         
-        <category>生活札记</category>
+        <category>
+          <name>生活札记</name>
+          <url>/categories/%E7%94%9F%E6%B4%BB%E6%9C%AD%E8%AE%B0/</url>
+        </category>
         
       </categories>
       
       
       <tags>
         
-        <tag>计算机基础知识</tag>
+        <tag>
+          <name>计算机基础知识</name>
+          <url>/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
+        </tag>
         
       </tags>
       
@@ -340,24 +502,45 @@
       
       <categories>
         
-        <category>论文精读</category>
+        <category>
+          <name>论文精读</name>
+          <url>/categories/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/</url>
+        </category>
         
-        <category>研途学术</category>
+        <category>
+          <name>研途学术</name>
+          <url>/categories/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/%E7%A0%94%E9%80%94%E5%AD%A6%E6%9C%AF/</url>
+        </category>
         
       </categories>
       
       
       <tags>
         
-        <tag>多模态学习</tag>
+        <tag>
+          <name>多模态学习</name>
+          <url>/tags/%E5%A4%9A%E6%A8%A1%E6%80%81%E5%AD%A6%E4%B9%A0/</url>
+        </tag>
         
-        <tag>MLMM</tag>
+        <tag>
+          <name>MLMM</name>
+          <url>/tags/MLMM/</url>
+        </tag>
         
-        <tag>缺失模态</tag>
+        <tag>
+          <name>缺失模态</name>
+          <url>/tags/%E7%BC%BA%E5%A4%B1%E6%A8%A1%E6%80%81/</url>
+        </tag>
         
-        <tag>深度学习</tag>
+        <tag>
+          <name>深度学习</name>
+          <url>/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</url>
+        </tag>
         
-        <tag>论文综述</tag>
+        <tag>
+          <name>论文综述</name>
+          <url>/tags/%E8%AE%BA%E6%96%87%E7%BB%BC%E8%BF%B0/</url>
+        </tag>
         
       </tags>
       
@@ -378,22 +561,40 @@
       
       <categories>
         
-        <category>大模型研习</category>
+        <category>
+          <name>大模型研习</name>
+          <url>/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%A0%94%E4%B9%A0/</url>
+        </category>
         
       </categories>
       
       
       <tags>
         
-        <tag>Happy-LLM</tag>
+        <tag>
+          <name>Happy-LLM</name>
+          <url>/tags/Happy-LLM/</url>
+        </tag>
         
-        <tag>注意力机制</tag>
+        <tag>
+          <name>注意力机制</name>
+          <url>/tags/%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6/</url>
+        </tag>
         
-        <tag>自注意力</tag>
+        <tag>
+          <name>自注意力</name>
+          <url>/tags/%E8%87%AA%E6%B3%A8%E6%84%8F%E5%8A%9B/</url>
+        </tag>
         
-        <tag>掩码注意力</tag>
+        <tag>
+          <name>掩码注意力</name>
+          <url>/tags/%E6%8E%A9%E7%A0%81%E6%B3%A8%E6%84%8F%E5%8A%9B/</url>
+        </tag>
         
-        <tag>多头注意力</tag>
+        <tag>
+          <name>多头注意力</name>
+          <url>/tags/%E5%A4%9A%E5%A4%B4%E6%B3%A8%E6%84%8F%E5%8A%9B/</url>
+        </tag>
         
       </tags>
       
@@ -414,22 +615,40 @@
       
       <categories>
         
-        <category>求职工坊</category>
+        <category>
+          <name>求职工坊</name>
+          <url>/categories/%E6%B1%82%E8%81%8C%E5%B7%A5%E5%9D%8A/</url>
+        </category>
         
       </categories>
       
       
       <tags>
         
-        <tag>LLM</tag>
+        <tag>
+          <name>大模型训练</name>
+          <url>/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83/</url>
+        </tag>
         
-        <tag>大模型训练</tag>
+        <tag>
+          <name>MedicalGPT</name>
+          <url>/tags/MedicalGPT/</url>
+        </tag>
         
-        <tag>MedicalGPT</tag>
+        <tag>
+          <name>LLM</name>
+          <url>/tags/LLM/</url>
+        </tag>
         
-        <tag>单卡训练</tag>
+        <tag>
+          <name>单卡训练</name>
+          <url>/tags/%E5%8D%95%E5%8D%A1%E8%AE%AD%E7%BB%83/</url>
+        </tag>
         
-        <tag>PT/SFT/DPO</tag>
+        <tag>
+          <name>PT/SFT/DPO</name>
+          <url>/tags/PT-SFT-DPO/</url>
+        </tag>
         
       </tags>
       
@@ -450,22 +669,40 @@
       
       <categories>
         
-        <category>大模型研习</category>
+        <category>
+          <name>大模型研习</name>
+          <url>/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%A0%94%E4%B9%A0/</url>
+        </category>
         
       </categories>
       
       
       <tags>
         
-        <tag>Happy-LLM</tag>
+        <tag>
+          <name>Happy-LLM</name>
+          <url>/tags/Happy-LLM/</url>
+        </tag>
         
-        <tag>NLP</tag>
+        <tag>
+          <name>NLP</name>
+          <url>/tags/NLP/</url>
+        </tag>
         
-        <tag>自然语言处理</tag>
+        <tag>
+          <name>自然语言处理</name>
+          <url>/tags/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/</url>
+        </tag>
         
-        <tag>文本处理</tag>
+        <tag>
+          <name>文本处理</name>
+          <url>/tags/%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86/</url>
+        </tag>
         
-        <tag>词向量</tag>
+        <tag>
+          <name>词向量</name>
+          <url>/tags/%E8%AF%8D%E5%90%91%E9%87%8F/</url>
+        </tag>
         
       </tags>
       
@@ -486,26 +723,50 @@
       
       <categories>
         
-        <category>算法学习</category>
+        <category>
+          <name>算法学习</name>
+          <url>/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/</url>
+        </category>
         
       </categories>
       
       
       <tags>
         
-        <tag>代码随想录</tag>
+        <tag>
+          <name>代码随想录</name>
+          <url>/tags/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/</url>
+        </tag>
         
-        <tag>算法</tag>
+        <tag>
+          <name>算法</name>
+          <url>/tags/%E7%AE%97%E6%B3%95/</url>
+        </tag>
         
-        <tag>数据结构</tag>
+        <tag>
+          <name>数据结构</name>
+          <url>/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
+        </tag>
         
-        <tag>双指针</tag>
+        <tag>
+          <name>双指针</name>
+          <url>/tags/%E5%8F%8C%E6%8C%87%E9%92%88/</url>
+        </tag>
         
-        <tag>链表</tag>
+        <tag>
+          <name>链表</name>
+          <url>/tags/%E9%93%BE%E8%A1%A8/</url>
+        </tag>
         
-        <tag>快慢指针</tag>
+        <tag>
+          <name>快慢指针</name>
+          <url>/tags/%E5%BF%AB%E6%85%A2%E6%8C%87%E9%92%88/</url>
+        </tag>
         
-        <tag>递归</tag>
+        <tag>
+          <name>递归</name>
+          <url>/tags/%E9%80%92%E5%BD%92/</url>
+        </tag>
         
       </tags>
       
@@ -526,24 +787,45 @@
       
       <categories>
         
-        <category>算法学习</category>
+        <category>
+          <name>算法学习</name>
+          <url>/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/</url>
+        </category>
         
       </categories>
       
       
       <tags>
         
-        <tag>代码随想录</tag>
+        <tag>
+          <name>代码随想录</name>
+          <url>/tags/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/</url>
+        </tag>
         
-        <tag>算法</tag>
+        <tag>
+          <name>算法</name>
+          <url>/tags/%E7%AE%97%E6%B3%95/</url>
+        </tag>
         
-        <tag>数据结构</tag>
+        <tag>
+          <name>数据结构</name>
+          <url>/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
+        </tag>
         
-        <tag>哈希表</tag>
+        <tag>
+          <name>哈希表</name>
+          <url>/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/</url>
+        </tag>
         
-        <tag>数组</tag>
+        <tag>
+          <name>数组</name>
+          <url>/tags/%E6%95%B0%E7%BB%84/</url>
+        </tag>
         
-        <tag>链表</tag>
+        <tag>
+          <name>链表</name>
+          <url>/tags/%E9%93%BE%E8%A1%A8/</url>
+        </tag>
         
       </tags>
       
@@ -564,20 +846,35 @@
       
       <categories>
         
-        <category>大模型研习</category>
+        <category>
+          <name>大模型研习</name>
+          <url>/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%A0%94%E4%B9%A0/</url>
+        </category>
         
       </categories>
       
       
       <tags>
         
-        <tag>LLM</tag>
+        <tag>
+          <name>LLM</name>
+          <url>/tags/LLM/</url>
+        </tag>
         
-        <tag>大模型</tag>
+        <tag>
+          <name>大模型</name>
+          <url>/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/</url>
+        </tag>
         
-        <tag>CS336</tag>
+        <tag>
+          <name>CS336</name>
+          <url>/tags/CS336/</url>
+        </tag>
         
-        <tag>Transformer</tag>
+        <tag>
+          <name>Transformer</name>
+          <url>/tags/Transformer/</url>
+        </tag>
         
       </tags>
       
@@ -598,26 +895,50 @@
       
       <categories>
         
-        <category>算法学习</category>
+        <category>
+          <name>算法学习</name>
+          <url>/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/</url>
+        </category>
         
       </categories>
       
       
       <tags>
         
-        <tag>代码随想录</tag>
+        <tag>
+          <name>代码随想录</name>
+          <url>/tags/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/</url>
+        </tag>
         
-        <tag>算法</tag>
+        <tag>
+          <name>算法</name>
+          <url>/tags/%E7%AE%97%E6%B3%95/</url>
+        </tag>
         
-        <tag>数据结构</tag>
+        <tag>
+          <name>数据结构</name>
+          <url>/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
+        </tag>
         
-        <tag>双指针</tag>
+        <tag>
+          <name>双指针</name>
+          <url>/tags/%E5%8F%8C%E6%8C%87%E9%92%88/</url>
+        </tag>
         
-        <tag>二分查找</tag>
+        <tag>
+          <name>二分查找</name>
+          <url>/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</url>
+        </tag>
         
-        <tag>滑动窗口</tag>
+        <tag>
+          <name>滑动窗口</name>
+          <url>/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</url>
+        </tag>
         
-        <tag>前缀和</tag>
+        <tag>
+          <name>前缀和</name>
+          <url>/tags/%E5%89%8D%E7%BC%80%E5%92%8C/</url>
+        </tag>
         
       </tags>
       
@@ -638,18 +959,30 @@
       
       <categories>
         
-        <category>生活札记</category>
+        <category>
+          <name>生活札记</name>
+          <url>/categories/%E7%94%9F%E6%B4%BB%E6%9C%AD%E8%AE%B0/</url>
+        </category>
         
       </categories>
       
       
       <tags>
         
-        <tag>GitHub</tag>
+        <tag>
+          <name>GitHub</name>
+          <url>/tags/GitHub/</url>
+        </tag>
         
-        <tag>建站</tag>
+        <tag>
+          <name>建站</name>
+          <url>/tags/%E5%BB%BA%E7%AB%99/</url>
+        </tag>
         
-        <tag>域名</tag>
+        <tag>
+          <name>域名</name>
+          <url>/tags/%E5%9F%9F%E5%90%8D/</url>
+        </tag>
         
       </tags>
       
@@ -670,18 +1003,30 @@
       
       <categories>
         
-        <category>研途学术</category>
+        <category>
+          <name>研途学术</name>
+          <url>/categories/%E7%A0%94%E9%80%94%E5%AD%A6%E6%9C%AF/</url>
+        </category>
         
       </categories>
       
       
       <tags>
         
-        <tag>Linux</tag>
+        <tag>
+          <name>Linux</name>
+          <url>/tags/Linux/</url>
+        </tag>
         
-        <tag>报错解决</tag>
+        <tag>
+          <name>报错解决</name>
+          <url>/tags/%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/</url>
+        </tag>
         
-        <tag>终端配置</tag>
+        <tag>
+          <name>终端配置</name>
+          <url>/tags/%E7%BB%88%E7%AB%AF%E9%85%8D%E7%BD%AE/</url>
+        </tag>
         
       </tags>
       
